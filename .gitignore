@@ -1,0 +1,36 @@
+# Ignore temporary files and folders
+.DS_Store
+Thumbs.db
+*.swp
+*~
+*.tmp
+desktop.ini
+
+# Ignore local configuration files
+.idea/
+.vscode/
+
+# Ignore dependencies and build temporary files
+node_modules/
+package-lock.json
+bower_components/
+*.log
+*.lock
+*.bak
+*.tmp
+npm-debug.log*
+
+# Ignore built files and folders
+/dist/
+/build/
+/out/
+
+# Ignore authentication data or password files
+.env
+.env.local
+.env.*.local
+
+# Ignore editor settings files for various editors
+.editorconfig
+*.sublime-project
+*.sublime-workspace
