@@ -1,38 +1,81 @@
-/* src/styles/App.scss */
-
 $primary-color: #3498db;
 $secondary-color: #2ecc71;
 
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
-  margin: 0;
-  padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
 }
 
 .App {
-  text-align: center;
+    text-align: center;
 
-  h1 {
-    color: $primary-color;
-  }
+    .table-container {
+        padding: 0 15px;
+        max-width: 1230px;
+        margin: 0 auto;
 
-  table {
-    width: 100%;
-    border-collapse: collapse;
-
-    th, td {
-      padding: 10px;
-      border: 1px solid #ddd;
+        border-radius: 4px;
     }
 
-    th {
-      background-color: $secondary-color;
-      color: white;
+    .filter-container {
+        display: flex;
+        justify-content: space-between;
     }
 
-    tr:nth-child(even) {
-      background-color: #f2f2f2;
+    h1 {
+        color: $primary-color;
     }
-  }
+
+    .filter-input {
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 16px;
+        width: 100%;
+        box-sizing: border-box;
+        transition: border-color 0.3s ease;
+        margin-bottom: 30px;
+
+        &:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+    }
+
+    .users-table {
+        width: 100%;
+        border-collapse: collapse;
+        table-layout: fixed;
+
+        th,
+        td {
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: $secondary-color;
+            color: white;
+        }
+        tbody tr {
+            height: 50px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        tr:hover {
+            background-color: $primary-color;
+            transition: 0.2s ease;
+            
+        }
+    }
+
+    h2,
+    .empty-message {
+        text-align: center;
+        color: #888;
+    }
 }
