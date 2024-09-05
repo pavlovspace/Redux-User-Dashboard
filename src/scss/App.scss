@@ -15,7 +15,6 @@ body {
         padding: 0 15px;
         max-width: 1230px;
         margin: 0 auto;
-
         border-radius: 4px;
     }
 
@@ -51,8 +50,23 @@ body {
 
         th,
         td {
+            flex: 1;
             padding: 10px;
             border: 1px solid #ddd;
+            box-sizing: border-box;
+            &:nth-child(1),
+            &:nth-child(2) {
+                @media (max-width: 768px) {
+                    flex: 1 0 50%;
+                }
+            }
+
+            &:nth-child(3),
+            &:nth-child(4) {
+                @media (max-width: 768px) {
+                    flex: 1 0 50%;
+                }
+            }
         }
 
         th {
@@ -69,7 +83,6 @@ body {
         tr:hover {
             background-color: $primary-color;
             transition: 0.2s ease;
-            
         }
     }
 
@@ -77,5 +90,23 @@ body {
     .empty-message {
         text-align: center;
         color: #888;
+    }
+
+    td {
+        &:nth-child(3),
+        &:nth-child(4) {
+            @media (max-width: 768px) {
+                display: none;
+            }
+        }
+    }
+
+    .filter-input,
+    th {
+        @media (max-width: 768px) {
+            &:nth-last-child(-n + 2) {
+                display: none;
+            }
+        }
     }
 }
