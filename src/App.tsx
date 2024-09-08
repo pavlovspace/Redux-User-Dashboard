@@ -1,5 +1,3 @@
-import React from 'react'
-import './App.css'
 import './scss/App.scss'
 import UsersTable from './components/UsersTable'
 
